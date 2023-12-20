@@ -166,6 +166,11 @@ progress {
   border: 2px solid var(--color-accent);
   color: var(--color-darkest);
 }
+.answer.wrong {
+  background-color: #e05858;
+  border: 2px solid var(--color-darkest);
+  color: var(--color-light);
+}
 
 .answer {
   transform: translateX(2rem);
