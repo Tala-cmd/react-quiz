@@ -1,7 +1,13 @@
+import Options from "./Options"
 
-function Question() {
+function Question({ question }) {
+  console.log(question)
   return (
-    <div>Question</div>
+    <div>
+      <h4>{question.question}</h4>
+
+      <Options question={question} />
+    </div>
   )
 }
 
