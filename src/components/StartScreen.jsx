@@ -1,4 +1,4 @@
-function StartScreen({ numQuestions, dispatch }) {
+function StartScreen({ dispatch, numQuestions }) {
   return (
     <div className="start">
         <h2>Welcome to The React Quiz!</h2>
