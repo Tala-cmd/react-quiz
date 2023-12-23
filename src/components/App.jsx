@@ -56,6 +56,8 @@ case "nextQuestion":
 case 'finish':
   return{...state, status:'finished', 
   highscore: state.points > state.highscore ? state.points : state.highscore}
+case 'restart':
+  return{...initialState, questions: state.questions, status:'ready' }
 
 default:
     throw new Error("Action unknown");
@@ -117,6 +119,7 @@ return (
             points={points}
             maxPossiblePoints={maxPossiblePoints}
             highscore={highscore}
+            dispatch={dispatch}
           />
       )}
     </Main>
