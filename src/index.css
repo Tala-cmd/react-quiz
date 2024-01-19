@@ -279,10 +279,10 @@ progress {
 
 @media screen and (max-width: 600px){
   html {
-    font-size: 40%;
+    font-size: 37%;
   }
   
   .main {
-    width: 75%;
+    width: 70%;
   }
 }
