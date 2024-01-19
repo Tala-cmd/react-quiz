@@ -72,6 +72,10 @@ const initialState = {
         secondsRemaining: state.secondsRemaining - 1,
         status: state.secondsRemaining === 0 ? "finished" : state.status,
       };
+
+  case 'restart':
+    return{ ...state, status:'ready' }
+  
   default:
       throw new Error("Action unknown");
   }
@@ -88,7 +92,7 @@ function QuizProvider({ children }){
       (prev, cur) => prev + cur.points,0);
   
     useEffect(function () {
-    fetch("https://marbled-pewter-hydrofoil.glitch.me/questions")
+    fetch("https://fluorescent-organic-swamp.glitch.me/questions")
         .then((res) => res.json())
         .then((data) => dispatch({ type: "dataReceived", payload: data }))
         .catch(() => dispatch({ type: "dataFailed" }));

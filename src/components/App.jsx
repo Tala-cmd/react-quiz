@@ -10,6 +10,7 @@
   import Footer from "./Footer";
   import Timer from "./Timer";
 import { useQuiz } from "../context/QuizContext";
+import RestartButton from "./RestartButton";
 
   export default function App() {
   const { status } = useQuiz();
@@ -28,8 +29,9 @@ import { useQuiz } from "../context/QuizContext";
             <Progress />
             <Question />
             <Footer>
-              <Timer />
               <NextButton />
+              <RestartButton />
+              <Timer />
             </Footer>
           </>
         )}
