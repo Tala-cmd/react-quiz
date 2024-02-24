@@ -73,9 +73,6 @@ const initialState = {
         status: state.secondsRemaining === 0 ? "finished" : state.status,
       };
 
-  case 'restart':
-    return{ ...state, status:'ready' }
-  
   default:
       throw new Error("Action unknown");
   }
